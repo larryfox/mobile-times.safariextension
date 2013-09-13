@@ -9,5 +9,7 @@ if (match && match[1]) {
     var new_domain = 'mobile.nytimes.com/blogs/'+subdomain
     href = href.replace(/(\w+)(?:\.\w+)?\.nytimes\.com/i, new_domain)
   }
-  window.location.href = href
+  if (subdomain !== 'mobile') {
+    window.location.href = href
+  }
 }
